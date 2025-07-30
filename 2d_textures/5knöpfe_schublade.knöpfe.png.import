@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdabs6gkdbqry"
-path.s3tc="res://.godot/imported/grüneLampe_grüneLampe.png-0db88fde683150001df42b28b4a74e8a.s3tc.ctex"
+uid="uid://d4euif6wns2kr"
+path.s3tc="res://.godot/imported/5knöpfe_schublade.knöpfe.png-bb9a4088b5e6d7a1d993aa84055089cf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "4d1979838833f4ea73cf43fe00af0987"
+"md5": "ce1e542405ca977cc394df037caec3be"
 }
 
 [deps]
 
-source_file="res://2d_textures/grüneLampe_grüneLampe.png"
-dest_files=["res://.godot/imported/grüneLampe_grüneLampe.png-0db88fde683150001df42b28b4a74e8a.s3tc.ctex"]
+source_file="res://2d_textures/5knöpfe_schublade.knöpfe.png"
+dest_files=["res://.godot/imported/5knöpfe_schublade.knöpfe.png-bb9a4088b5e6d7a1d993aa84055089cf.s3tc.ctex"]
 
 [params]
 

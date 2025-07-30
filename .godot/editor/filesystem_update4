@@ -1,0 +1,6 @@
+res://camera_script.tscn
+res://inventory/playerinv.tres
+res://DialogueUI.tscn
+res://intro_okay.tscn
+res://katze.gd
+res://addons/dialogue_manager/example_balloon/example_balloon.gd

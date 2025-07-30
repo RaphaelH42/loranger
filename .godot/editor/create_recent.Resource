@@ -1,0 +1,3 @@
+DialogueResource
+Inv
+InvItem

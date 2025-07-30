@@ -1,0 +1,14 @@
+CollisionShape3D
+Area3D
+Node3D
+StaticBody3D
+Timer
+VideoStreamPlayer
+AspectRatioContainer
+Control
+SpotLight3D
+MeshInstance3D
+OmniLight3D
+Camera3D
+CanvasLayer
+AnimationPlayer

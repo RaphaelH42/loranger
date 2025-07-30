@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcdg154w1t43t"]
+
+[ext_resource type="PackedScene" uid="uid://wcfb1xyc610x" path="res://furniture/buecherschrank_groß/bücherschrank_neu.glb" id="1_21jwm"]
+[ext_resource type="Script" uid="uid://defwe5toumfc8" path="res://furniture/buecherschrank_closeup.gd" id="1_h8hx1"]
+[ext_resource type="PackedScene" uid="uid://krfr25dirj3x" path="res://furniture/bücherschrank (1)_books_blend.glb" id="2_h8hx1"]
+[ext_resource type="PackedScene" uid="uid://4uygi3uul3fk" path="res://wall/texture.wall.floor.glb" id="3_l25uw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l25uw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8hx1"]
+size = Vector3(0.2, 0.8, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l25uw"]
+size = Vector3(3, 5, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_h8hx1")
+
+[node name="bücherschrank_neu" parent="." instance=ExtResource("1_21jwm")]
+transform = Transform3D(-0.00951185, 0, -0.999955, 0, 1, 0, 0.999955, 0, -0.00951185, 0, 0, 4.85221)
+
+[node name="bücherschrank (1)_books_blend" parent="." instance=ExtResource("2_h8hx1")]
+transform = Transform3D(-0.0947165, 0, -0.995504, 0, 1, 0, 0.995504, 0, -0.0947165, 5.12054, 0, -3.62614)
+
+[node name="texture_wall_floor" parent="." instance=ExtResource("3_l25uw")]
+transform = Transform3D(0.0508438, 0.0034566, 13.3549, -0.0241631, 3.75639, 0, -1.15434, -0.0784779, 0.588223, 1.79418, 0, -3.18209)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.982362, -0.186987, 0, 0.186987, 0.982362, 1.09814, 2.09177, 1.65162)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53277, 3.76079, -1.64417)
+light_color = Color(0.831856, 0.928892, 0.327885, 1)
+light_energy = 12.0
+omni_range = 5.438
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(20.8208, 0, 0, 0, 0.116327, 0, 0, 0, 6.94054, 0.952606, 0, -0.843013)
+mesh = SubResource("BoxMesh_l25uw")
+
+[node name="Area3D_zauberbuch" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83792, 4.24313, -3.27912)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_zauberbuch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.520522, 0.0963941, -0.477394)
+shape = SubResource("BoxShape3D_h8hx1")
+
+[node name="Area3D_back" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_back"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86297, 2.62206, -3.47206)
+shape = SubResource("BoxShape3D_l25uw")
+
+[connection signal="input_event" from="Area3D_zauberbuch" to="." method="_on_area_3d_zauberbuch_input_event"]
+[connection signal="input_event" from="Area3D_back" to="." method="_on_area_3d_back_input_event"]

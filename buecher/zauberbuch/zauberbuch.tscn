@@ -1,0 +1,140 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1ikal4isipma"]
+
+[ext_resource type="Script" uid="uid://81nbkjqws1wp" path="res://open_book.gd" id="1_x35dm"]
+[ext_resource type="PackedScene" uid="uid://qmxeam40eejl" path="res://buecher/zauberbuch/zauberbuch_titel.glb" id="2_o3y1r"]
+[ext_resource type="PackedScene" uid="uid://cg376c4747hjf" path="res://buecher/zauberbuch/Front_Cover_1.glb" id="3_u00iq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x35dm"]
+size = Vector3(6, 1, 9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1c4qt"]
+size = Vector3(2.5, 1, 4)
+
+[sub_resource type="Animation" id="Animation_u8kbf"]
+length = 0.001
+<<<<<<< HEAD
+=======
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("zauberbuch/pivot_cover")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, -0.0212652, 0.999774)
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7
+
+[sub_resource type="Animation" id="Animation_2dpje"]
+resource_name = "open_book"
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("zauberbuch/pivot_cover")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0.0333333, 1, 0, 0, -0.0212652, 0.999774, 0.266667, 1, 0, 0, 0.40747, 0.913219, 0.7, 1, 0, 0, 0.924686, 0.380731, 1, 1, 0, 0, 0.999519, 0.0310007)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ybspi"]
+_data = {
+&"RESET": SubResource("Animation_u8kbf"),
+&"open_book": SubResource("Animation_2dpje")
+}
+
+<<<<<<< HEAD
+[sub_resource type="BoxShape3D" id="BoxShape3D_o3y1r"]
+size = Vector3(4, 1, 4)
+=======
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_u00iq"]
+file = "video.ogg"
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7
+
+[node name="Node3D" type="Node3D"]
+
+[node name="zauberbuch" type="Node3D" parent="."]
+script = ExtResource("1_x35dm")
+
+[node name="zauberbuch_titel" parent="zauberbuch" instance=ExtResource("2_o3y1r")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.16759, -0.147284, -0.961715)
+
+[node name="pivot_cover" type="Node3D" parent="zauberbuch"]
+<<<<<<< HEAD
+transform = Transform3D(1.03614, 0.0425878, 0, -0.0440974, 1.00067, 0, 0, 0, 0.886828, -1.52242, 0.145407, 0)
+
+[node name="Front_Cover_1" parent="zauberbuch/pivot_cover" instance=ExtResource("3_u00iq")]
+transform = Transform3D(0.39522, -7.45058e-09, 0, -1.86265e-08, 0.97762, 0, 0, 0, 0.377939, 1.57391, -0.112651, -1.17325)
+=======
+transform = Transform3D(0.999095, 0.0425208, 0, -0.0425208, 0.999095, 0, 0, 0, 1, -1.48623, 0, 0)
+
+[node name="Front_Cover_1" parent="zauberbuch/pivot_cover" instance=ExtResource("3_u00iq")]
+transform = Transform3D(0.39522, 1.11759e-08, 0, 0, 0.977619, 0, 0, 0, 0.377939, 1.53225, 0.0652115, -1.17325)
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7
+
+[node name="StaticBody3D" type="StaticBody3D" parent="zauberbuch/pivot_cover/Front_Cover_1" groups=["cover"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zauberbuch/pivot_cover/Front_Cover_1/StaticBody3D" groups=["cover"]]
+transform = Transform3D(1, -2.98023e-08, 0, 3.91155e-08, 0.999998, 0, 0, 0, 0.999999, 0.0323997, 0.00082733, 0.479899)
+shape = SubResource("BoxShape3D_x35dm")
+
+[node name="spine" parent="zauberbuch" instance=ExtResource("3_u00iq")]
+<<<<<<< HEAD
+transform = Transform3D(0.00405863, -1.01753, 0, 0.0728217, 0.0567109, 0, 0, 0, 0.34708, -1.55528, -0.204942, -0.991496)
+=======
+transform = Transform3D(0.0030222, -0.998451, 0, 0.0542257, 0.0556473, 0, 0, 0, 0.34708, -1.55528, -0.204942, -0.991496)
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7
+
+[node name="backcover" parent="zauberbuch" instance=ExtResource("3_u00iq")]
+transform = Transform3D(-0.395405, -0.119412, 0, 0.0329738, -1.43193, 0, 0, 0, 0.34708, -0.00874221, -0.559178, -0.991496)
+
+[node name="Area3D" type="Area3D" parent="zauberbuch"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zauberbuch/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.935417)
+shape = SubResource("BoxShape3D_1c4qt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ybspi")
+}
+
+[node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
+<<<<<<< HEAD
+transform = Transform3D(1, 0, 0, 0, 0.0511681, 0.99869, 0, -0.99869, 0.0511681, -1.0153, 3.96979, -0.574022)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.282358, 0.959309, 0, -0.959309, -0.282358, 0, 4.28501, -2.49827)
+light_color = Color(0.965367, 0.682637, 0.704247, 1)
+light_energy = 9.758
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7541, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.976054, 0, -0.714024)
+shape = SubResource("BoxShape3D_o3y1r")
+
+[connection signal="input_event" from="zauberbuch/Area3D" to="zauberbuch" method="_on_area_3d_input_event"]
+[connection signal="input_event" from="Area3D" to="zauberbuch" method="_on_area_3d_input_event"]
+=======
+transform = Transform3D(1, 0, 0, 0, 0.0511681, 0.99869, 0, -0.99869, 0.0511681, 0, 4.1314, -0.574022)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.282358, 0.959309, 0, -0.959309, -0.282358, 0, 4.28501, -2.49827)
+light_color = Color(0.992157, 0.701961, 0.360784, 1)
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.7778
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_u00iq")
+expand = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[connection signal="input_event" from="zauberbuch/Area3D" to="zauberbuch" method="_on_area_3d_input_event"]
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7

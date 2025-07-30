@@ -1,0 +1,312 @@
+[gd_scene load_steps=42 format=3 uid="uid://csf4nih7sgf55"]
+
+[ext_resource type="Script" uid="uid://cfgd1vsnpf8pm" path="res://clicktomove.gd" id="1_4n72w"]
+[ext_resource type="PackedScene" uid="uid://0yrjv0q3c6e3" path="res://boydown.glb" id="1_v4r07"]
+[ext_resource type="Script" uid="uid://diaac5o0qnkl4" path="res://camera_rig_3d.gd" id="2_4n72w"]
+[ext_resource type="Resource" uid="uid://bxesq4pdv56i6" path="res://inventory/playerinv.tres" id="2_7jckw"]
+[ext_resource type="Script" uid="uid://b2ursdhjfmtil" path="res://set_material.gd" id="3_o5brn"]
+[ext_resource type="PackedScene" uid="uid://c0cn06207k6hx" path="res://inventory/inv_ui.tscn" id="4_7jckw"]
+[ext_resource type="Script" uid="uid://cpt7hqk32etut" path="res://dialog_cube.gd" id="4_xerf1"]
+[ext_resource type="Script" uid="uid://wt3ijmdb5puv" path="res://wall.gd" id="5_64ncn"]
+[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://addons/dialogue_manager/example_balloon/example_balloon.tscn" id="5_xerf1"]
+[ext_resource type="Resource" uid="uid://b6nmggybf7r1x" path="res://inventory/items/geargear.tres" id="6_qwuem"]
+[ext_resource type="PackedScene" uid="uid://nt8xguc4qoi0" path="res://schraube_collectible.tscn" id="10_1k4qt"]
+[ext_resource type="Resource" uid="uid://cjkr2v3624t8x" path="res://inventory/items/screw.tres" id="11_wmnu3"]
+[ext_resource type="PackedScene" uid="uid://d01u1r6wuo0du" path="res://furniture/table/Table .glb" id="12_wmnu3"]
+[ext_resource type="PackedScene" uid="uid://cn1m2o0ea8513" path="res://furniture/oil_lamp/scene.gltf" id="13_h03pe"]
+[ext_resource type="PackedScene" uid="uid://dvja0nrsllgkn" path="res://furniture/wandschrank/wandschrank.schubladen.glb" id="14_xqio1"]
+[ext_resource type="PackedScene" uid="uid://cgj4sjr2p3eu2" path="res://furniture/schwebeillusion.glb" id="15_4wo56"]
+[ext_resource type="PackedScene" uid="uid://dtugoi7mnj52w" path="res://furniture/vitrine.glb" id="15_xxfyy"]
+[ext_resource type="Script" uid="uid://bku07fpi30cw7" path="res://furniture/wandschrank/wandschrank_interaction.gd" id="16_bhch6"]
+[ext_resource type="PackedScene" uid="uid://00o7b6x3hndc" path="res://furniture/carpet_blue.glb" id="16_xpss3"]
+[ext_resource type="PackedScene" uid="uid://dvqgih2ym8clv" path="res://furniture/Caesar_Decipher_1_3.glb" id="19_4tbvq"]
+[ext_resource type="Script" uid="uid://dx4dxcwjif2c2" path="res://furniture/interaction.gd" id="20_17qtc"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_egite"]
+vertices = PackedVector3Array(-8.5815, 0.0695, -9.819, -8.5815, 0.0695, 9.931, 8.6685, 0.0695, 9.931, 8.6685, 0.0695, -9.819)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+cell_height = 0.01
+
+[sub_resource type="BoxMesh" id="BoxMesh_xerf1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7vlg0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7jckw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_64ncn"]
+
+[sub_resource type="Sky" id="Sky_qwuem"]
+sky_material = SubResource("ProceduralSkyMaterial_64ncn")
+
+[sub_resource type="Environment" id="Environment_cwd05"]
+background_mode = 2
+sky = SubResource("Sky_qwuem")
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_4n72w"]
+file = "video.ogg"
+
+[sub_resource type="BoxMesh" id="BoxMesh_1k4qt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wmnu3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7jckw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_64ncn"]
+size = Vector3(1.2, 1.2, 1.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xqio1"]
+size = Vector3(4, 7, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4wo56"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xpss3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h03pe"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tjlnt"]
+size = Vector3(7, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xxfyy"]
+size = Vector3(2.1, 3.1, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o5brn"]
+size = Vector3(1.25, 5.8, 4)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_17qtc"]
+radius = 2.885
+
+[node name="Main" type="Node3D"]
+
+[node name="schraube_collectible" parent="." instance=ExtResource("10_1k4qt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.16235)
+item = ExtResource("11_wmnu3")
+
+[node name="schraube_collectible2" parent="." instance=ExtResource("10_1k4qt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52149, 0, 0)
+item = ExtResource("11_wmnu3")
+
+[node name="schraube_collectible3" parent="." instance=ExtResource("10_1k4qt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.59032, 0, 0)
+item = ExtResource("11_wmnu3")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.877023, 0, 0, 1.36845)
+navigation_mesh = SubResource("NavigationMesh_egite")
+script = ExtResource("3_o5brn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
+transform = Transform3D(18.163, 0, 0, 0, 0.101, 0, 0, 0, 20.638, 0, 0, 0)
+mesh = SubResource("BoxMesh_xerf1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_7vlg0")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(0.940098, 0, 0.340904, 0, 1, 0, -0.340904, 0, 0.940098, 0, 0, 0)
+script = ExtResource("1_4n72w")
+inv = ExtResource("2_7jckw")
+
+[node name="boydown" parent="CharacterBody3D" instance=ExtResource("1_v4r07")]
+transform = Transform3D(-0.991429, 0, -0.130647, 0, 1, 0, 0.130647, 0, -0.991429, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+shape = SubResource("CapsuleShape3D_7jckw")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cwd05")
+
+[node name="CameraRig3D" type="Node3D" parent="." node_paths=PackedStringArray("player")]
+transform = Transform3D(1, 0, 0, 0, 0.999887, 0.0150267, 0, -0.0150267, 0.999887, -0.523499, 1.92646, 2.63231)
+script = ExtResource("2_4n72w")
+player = NodePath("../CharacterBody3D")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraRig3D"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.178892, -0.689366)
+spring_length = 10.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig3D/SpringArm3D" groups=["Camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.44411, -2.78648)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.7778
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_4n72w")
+expand = true
+
+[node name="Wall" type="StaticBody3D" parent="." groups=["walls"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.20383, 0.557476, 7.12618)
+script = ExtResource("5_64ncn")
+item = ExtResource("6_qwuem")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall"]
+mesh = SubResource("BoxMesh_1k4qt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall"]
+shape = SubResource("BoxShape3D_wmnu3")
+
+[node name="Wall2" type="StaticBody3D" parent="." groups=["puzzlewalls"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25406, 0.557476, 5.07075)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall2"]
+mesh = SubResource("BoxMesh_1k4qt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2"]
+shape = SubResource("BoxShape3D_wmnu3")
+
+[node name="Order" type="Label3D" parent="."]
+transform = Transform3D(1.83075, 0, 0, 0, 1.72931, 0, 0, 0, 1, -3.743, 2.46908, 7.93014)
+text = "Hallo"
+
+[node name="Order2" type="Label3D" parent="."]
+transform = Transform3D(2.05504, 0, 0, 0, 2.37746, 0, 0, 0, 1, 1.1091, 1.523, 4.67049)
+text = "Hallo"
+
+[node name="DialogCube" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.39459, 0, -1.62312)
+script = ExtResource("4_xerf1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DialogCube"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.17536, 0.471846, -3.24156)
+mesh = SubResource("BoxMesh_7jckw")
+
+[node name="Area3D" type="Area3D" parent="DialogCube"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DialogCube/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10033, 0.285246, -3.21464)
+shape = SubResource("BoxShape3D_64ncn")
+
+[node name="DialogueUi" parent="." instance=ExtResource("5_xerf1")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="inv_UI" parent="CanvasLayer" instance=ExtResource("4_7jckw")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -149.5
+offset_top = -183.0
+offset_right = 149.5
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="light" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13058, -0.0251952, 2.57268)
+
+[node name="oil_lamp" parent="light" instance=ExtResource("13_h03pe")]
+transform = Transform3D(0.0510319, 0, 0, 0, 0.0710897, 0, 0, 0, 0.0603993, 2.69183, 1.06931, -0.971985)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="light/oil_lamp"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light/oil_lamp/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36578, 0)
+shape = SubResource("BoxShape3D_xqio1")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.692, 1.24497, -0.972)
+light_color = Color(1, 0.8, 0.6, 1)
+
+[node name="Wall3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0999862, 0, 0, 0, 5.43517, 0, 0, 0, 21.0145, 9.16499, 2.59183, -0.145409)
+mesh = SubResource("BoxMesh_4wo56")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall3/StaticBody3D"]
+shape = SubResource("BoxShape3D_xpss3")
+
+[node name="Wall4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0999862, 0, 0, 0, 5.43517, 0, 0, 0, 21.0145, -9.11957, 2.59183, -0.145409)
+mesh = SubResource("BoxMesh_4wo56")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall4/StaticBody3D"]
+shape = SubResource("BoxShape3D_xpss3")
+
+[node name="furniture" type="Node3D" parent="."]
+
+[node name="Table " parent="furniture" instance=ExtResource("12_wmnu3")]
+transform = Transform3D(0.663801, 0, 0, 0, 0.354688, 0, 0, 0, 0.943504, 7.67975, 1.04194, 5.51724)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="furniture/Table "]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="furniture/Table /StaticBody3D"]
+transform = Transform3D(3.39118, 0, 0, 0, 3.54508, 0, 0, 0, 6.04079, 0, -0.821734, -0.0355084)
+shape = SubResource("BoxShape3D_h03pe")
+
+[node name="wandschrank_schubladen" parent="furniture" instance=ExtResource("14_xqio1")]
+transform = Transform3D(-0.566629, 0, 8.74228e-08, 0, 0.742939, 0, -4.95363e-08, 0, -1, 8.76492, 1.98973, 4.66489)
+script = ExtResource("16_bhch6")
+
+[node name="Area3D" type="Area3D" parent="furniture/wandschrank_schubladen"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="furniture/wandschrank_schubladen/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.06581e-14, 0, 1, 1.77729, 0, -0.718191)
+shape = SubResource("BoxShape3D_tjlnt")
+
+[node name="schwebeillusion" parent="furniture" instance=ExtResource("15_4wo56")]
+transform = Transform3D(-0.0585517, 0, -0.931759, 0, 0.994101, 0, 0.998788, 0, -0.0546223, -4.94148, 0.349927, -5.91459)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="furniture/schwebeillusion"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="furniture/schwebeillusion/StaticBody3D"]
+transform = Transform3D(1, 0, 1.11759e-08, 0, 1, 0, 0, 0, 1, 0, 1.24295, 0)
+shape = SubResource("BoxShape3D_xxfyy")
+
+[node name="Table 2" parent="furniture" instance=ExtResource("12_wmnu3")]
+transform = Transform3D(-0.00984861, 0, -0.913593, 0, 0.354688, 0, 0.666166, 0, -0.0135066, 6.08539, 1.04194, 1.57103)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="furniture/Table 2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="furniture/Table 2/StaticBody3D"]
+transform = Transform3D(4.37157, 0, 2.23517e-08, 0, 3.54508, 0, 1.49012e-08, 0, 6.01497, -0.406963, -0.821734, -0.0311213)
+shape = SubResource("BoxShape3D_h03pe")
+
+[node name="carpet_blue" parent="furniture" instance=ExtResource("16_xpss3")]
+transform = Transform3D(1.43424, 0, 0, 0, 1, 0, 0, 0, 1.62624, -2.07698, 0.0504892, 5.39772)
+
+[node name="vitrine" parent="furniture" instance=ExtResource("15_xxfyy")]
+transform = Transform3D(1, 0, 0, 0, 0.956385, 0, 0, 0, 0.854876, -8.66219, -0.111372, -1)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="furniture/vitrine"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="furniture/vitrine/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223406, 3.14273, 0)
+shape = SubResource("BoxShape3D_o5brn")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="furniture/vitrine"]
+transform = Transform3D(1, 0, 0, 0, 1.0456, 0, 0, 0, 1.16976, 0, 2.57801, 0)
+light_color = Color(1, 0.8, 0.6, 1)
+omni_range = 5.915
+
+[node name="Caesar_Decipher_1_3" parent="furniture" instance=ExtResource("19_4tbvq")]
+transform = Transform3D(0.536319, 0, 0, 0, 1, 0, 0, 0, 0.429996, 5.08978, 1.1075, 2.07966)
+script = ExtResource("20_17qtc")
+
+[node name="Area3D" type="Area3D" parent="furniture/Caesar_Decipher_1_3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="furniture/Caesar_Decipher_1_3/Area3D"]
+shape = SubResource("SphereShape3D_17qtc")
+
+[connection signal="body_entered" from="DialogCube/Area3D" to="DialogCube" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="furniture/wandschrank_schubladen/Area3D" to="furniture/wandschrank_schubladen" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="furniture/Caesar_Decipher_1_3/Area3D" to="furniture/Caesar_Decipher_1_3" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="furniture/Caesar_Decipher_1_3/Area3D" to="furniture/Caesar_Decipher_1_3" method="_on_area_3d_body_exited"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d0vqb7hfjd20y"
+path="res://.godot/imported/katze_test.dialogue-acc084a956bbff1adcfb10588a50e2d1.tres"
+
+[deps]
+
+source_file="res://dialogue/katze_test.dialogue"
+dest_files=["res://.godot/imported/katze_test.dialogue-acc084a956bbff1adcfb10588a50e2d1.tres"]
+
+[params]
+
+defaults=true

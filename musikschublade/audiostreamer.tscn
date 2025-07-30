@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://chi0wx82gotpb"]
+
+[ext_resource type="AudioStream" uid="uid://k7lhlt6ns4oe" path="res://musikschublade/sounds/other_sound.mp3" id="1_gwrfx"]
+[ext_resource type="AudioStream" uid="uid://drk1jf03ogywr" path="res://musikschublade/sounds/piano_sounds.mp3" id="2_wtekv"]
+[ext_resource type="AudioStream" uid="uid://bjeim1sbt5vbu" path="res://musikschublade/sounds/random_sound.mp3" id="3_kctfg"]
+[ext_resource type="AudioStream" uid="uid://d0ba0wvbfl2ea" path="res://musikschublade/sounds/short_sound.mp3" id="4_bqe3s"]
+[ext_resource type="AudioStream" uid="uid://opouwtw1cqy1" path="res://musikschublade/sounds/wrong.mp3" id="5_wtekv"]
+[ext_resource type="AudioStream" uid="uid://pmc1psgjt3vp" path="res://musikschublade/sounds/applause.mp3" id="6_kctfg"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_gwrfx")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_wtekv")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kctfg")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bqe3s")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_wtekv")
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_kctfg")
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

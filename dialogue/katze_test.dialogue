@@ -1,0 +1,12 @@
+title: katze_test
+
+~ katze_test
+Nathan: [[Hi]] Emile.
+Nathan: Möchtest du Hilfe haben?
+- Ja, gerne!
+	Nathan: Das ist bitter. Ich hab nämlich keine Ahnung.
+- Erstmal nicht, danke.
+	Nathan: Okay. Komm gerne wieder, wenn du Hlfe brauchst.
+- Gespräch beenden => END
+
+=> END

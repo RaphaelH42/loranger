@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://q1ck2qawb14n"]
+
+[ext_resource type="Script" uid="uid://v6g87ci12y6y" path="res://schubladen/schublade_paper.gd" id="1_5wq68"]
+[ext_resource type="PackedScene" uid="uid://ca3nhkj1kvlpo" path="res://musikschublade/schublade.wandregal.glb" id="1_i20dk"]
+[ext_resource type="PackedScene" uid="uid://iyu53wv0dl5t" path="res://2d_textures/paper.glb" id="2_5wq68"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fepu4"]
+size = Vector3(4, 1, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_5wq68")
+
+[node name="schublade_wandregal" parent="." instance=ExtResource("1_i20dk")]
+transform = Transform3D(1.88973, 0, 0, 0, 0.421762, 0, 0, 0, 1.14582, 0, 0, 0)
+
+[node name="paper" parent="." instance=ExtResource("2_5wq68")]
+transform = Transform3D(0.00178124, 0.0498115, -0.998757, -0.999361, 0.0357368, 0, 0.0356924, 0.998119, 0.0498433, 0, 0.168014, 0.107109)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.00188491, 0.999998, 0, -0.999998, 0.00188491, 0.0334984, 1.54277, 0.110318)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.412659, 0.910885, 0, -0.910885, 0.412659, 0, 3.20309, 2.15277)
+light_color = Color(0.827881, 0.927231, 0.333136, 1)
+light_energy = 2.979
+
+[node name="Area3_left" type="Area3D" parent="."]
+transform = Transform3D(0.0223383, 0, -0.99975, 0, 1, 0, 0.99975, 0, 0.0223383, -1.60422, 0, 0.178322)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3_left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.596846, 0)
+shape = SubResource("BoxShape3D_fepu4")
+
+[node name="Area3_right" type="Area3D" parent="."]
+transform = Transform3D(0.0223383, 0, -0.99975, 0, 1, 0, 0.99975, 0, 0.0223383, 1.65105, 0, 0.178322)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3_right"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.596846, 0)
+shape = SubResource("BoxShape3D_fepu4")
+
+[connection signal="input_event" from="Area3_left" to="." method="_on_area_3d_3_input_event"]
+[connection signal="input_event" from="Area3_right" to="." method="_on_area_3d_4_input_event"]

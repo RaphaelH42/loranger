@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb3cdpneyo4xk"]
+
+[ext_resource type="PackedScene" uid="uid://d0kgbnybsdqvd" path="res://rotation_day/Caesar_Decipher_1_3.glb" id="1_onuwo"]
+
+[node name="Caesar_Decipher_1_3" instance=ExtResource("1_onuwo")]

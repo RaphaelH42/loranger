@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b2d3fr0r0tcq0"
+path.s3tc="res://.godot/imported/bücherschrank_neu_book_pattern_nor_4k.png-6d5477b585354833b5ecca5c747bb491.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "4b9baafb279c7238f895d996f5cceee9"
+}
+
+[deps]
+
+source_file="res://furniture/buecherschrank_groß/bücherschrank_neu_book_pattern_nor_4k.png"
+dest_files=["res://.godot/imported/bücherschrank_neu_book_pattern_nor_4k.png-6d5477b585354833b5ecca5c747bb491.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://furniture/bücherschrank_neu_book_pattern_nor_4k.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,0 +1,42 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://uue2ubydja36"
+path.s3tc="res://.godot/imported/flat_book_1_3_MEMOIRS_OF_ROBERT_HOUDIN-1-1.jpg-5a795d8c3298e4b9835e2bfc0a58f1e0.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+<<<<<<< HEAD
+"md5": "45441fdc130ee03ddb2b0d5b464acfa9"
+=======
+"md5": "caeffcde94db1e7ab74c9251811b6508"
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7
+}
+
+[deps]
+
+source_file="res://schublade_mit_notizbuch/flat_book_1_3_MEMOIRS_OF_ROBERT_HOUDIN-1-1.jpg"
+dest_files=["res://.godot/imported/flat_book_1_3_MEMOIRS_OF_ROBERT_HOUDIN-1-1.jpg-5a795d8c3298e4b9835e2bfc0a58f1e0.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

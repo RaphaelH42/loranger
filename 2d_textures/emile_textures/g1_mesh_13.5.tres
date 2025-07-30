@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bwgpy6q5604f4"]
+
+[resource]
+resource_name = "g1_mesh_13.5"
+vertex_color_use_as_albedo = true
+emission_enabled = true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cultb1cnkbvhr"
+path="res://.godot/imported/zauberbuch.dialogue-3bdc6cdc3cbf5284a04b0a3fdcdafdda.tres"
+
+[deps]
+
+source_file="res://dialogue/zauberbuch.dialogue"
+dest_files=["res://.godot/imported/zauberbuch.dialogue-3bdc6cdc3cbf5284a04b0a3fdcdafdda.tres"]
+
+[params]
+
+defaults=true

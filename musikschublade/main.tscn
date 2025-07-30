@@ -1,0 +1,275 @@
+<<<<<<< HEAD
+[gd_scene load_steps=11 format=3 uid="uid://c747a8eidgrmo"]
+
+[ext_resource type="Script" uid="uid://bokx1hu8rinl5" path="res://musikschublade/play_sounds.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://chi0wx82gotpb" path="res://musikschublade/audiostreamer.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bgor80w85seu8" path="res://musikschublade/schublade.wandregal2.glb" id="5_aj1jl"]
+[ext_resource type="PackedScene" uid="uid://ca3nhkj1kvlpo" path="res://musikschublade/schublade.wandregal.glb" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://87lhcqeoxvvb" path="res://2d_textures/5knöpfe.2d.glb" id="8_83goh"]
+
+[sub_resource type="Animation" id="Animation_83goh"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_hb4ui"]
+resource_name = "schublade_auf"
+length = 1.5
+
+[sub_resource type="Animation" id="Animation_aj1jl"]
+resource_name = "open_schublade"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tx6je"]
+_data = {
+&"RESET": SubResource("Animation_83goh"),
+&"open_schublade": SubResource("Animation_aj1jl"),
+&"schublade_auf": SubResource("Animation_hb4ui")
+}
+=======
+[gd_scene load_steps=13 format=3 uid="uid://c747a8eidgrmo"]
+
+[ext_resource type="Script" uid="uid://bokx1hu8rinl5" path="res://musikschublade/play_sounds.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://ck6mmqhqu547m" path="res://furniture/wandschrank/button_1.gd" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://chi0wx82gotpb" path="res://musikschublade/audiostreamer.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://wkwxqadnl4wq" path="res://furniture/wandschrank/button_2.gd" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://bgdyso5kyw0p7" path="res://furniture/wandschrank/button_3.gd" id="4_7mycd"]
+[ext_resource type="Script" uid="uid://dv4aofdwq604d" path="res://furniture/wandschrank/button_4.gd" id="5_272bh"]
+[ext_resource type="PackedScene" uid="uid://ca3nhkj1kvlpo" path="res://musikschublade/schublade.wandregal.glb" id="7_272bh"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1bvp3"]
+height = 0.1
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lquwl"]
+height = 0.15
+
+<<<<<<< HEAD
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_0xm2m")
+
+=======
+[sub_resource type="Animation" id="Animation_83goh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("schublade_mitte:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.020944, -1.5708, 1.56731)]
+}
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("schublade_mitte")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -2.60047, 1.84765)
+
+[sub_resource type="Animation" id="Animation_hb4ui"]
+resource_name = "schublade_auf"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("schublade_mitte:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.166667, 0.733333, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.020944, -1.5708, 1.56731), Vector3(-0.018471, -1.56092, 1.07638), Vector3(-0.00825057, -1.55155, 0.401364)]
+}
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("schublade_mitte")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0.2, 1, 0, -2.60047, 1.84765, 0.7, 1, 0, -2.19559, 2.05614, 1.2, 1, 0, -1.72632, 2.96209)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tx6je"]
+_data = {
+&"RESET": SubResource("Animation_83goh"),
+&"schublade_auf": SubResource("Animation_hb4ui")
+}
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_0xm2m")
+
+[node name="play_button" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.198646, -0.292739, 0)
+mesh = SubResource("CylinderMesh_1bvp3")
+
+[node name="play_area" type="Area3D" parent="play_button"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="play_button/play_area"]
+shape = SubResource("CylinderShape3D_lquwl")
+
+[node name="Label3D" type="Label3D" parent="play_button"]
+transform = Transform3D(1, 0, 0, 0, 0.0270144, 0.999635, 0, -0.999635, 0.0270144, 0, 0.0618467, 0)
+text = "Play"
+
+[node name="audio_1_button" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83454, -0.435248, -1.01285)
+mesh = SubResource("CylinderMesh_1bvp3")
+script = ExtResource("2_1bvp3")
+
+[node name="audio_1_area" type="Area3D" parent="audio_1_button"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="audio_1_button/audio_1_area"]
+shape = SubResource("CylinderShape3D_lquwl")
+
+[node name="audio_2_button" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51136, -0.55467, -1.0993)
+mesh = SubResource("CylinderMesh_1bvp3")
+script = ExtResource("3_1bvp3")
+
+[node name="audio_2_area" type="Area3D" parent="audio_2_button"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="audio_2_button/audio_2_area"]
+shape = SubResource("CylinderShape3D_lquwl")
+
+[node name="audio_3_button" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.88525, -0.468022, 1.00766)
+mesh = SubResource("CylinderMesh_1bvp3")
+script = ExtResource("4_7mycd")
+
+[node name="audio_3_area" type="Area3D" parent="audio_3_button"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="audio_3_button/audio_3_area"]
+shape = SubResource("CylinderShape3D_lquwl")
+
+[node name="audio_4_button" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74707, -0.439043, 1.02903)
+mesh = SubResource("CylinderMesh_1bvp3")
+script = ExtResource("5_272bh")
+
+[node name="audio_4_area" type="Area3D" parent="audio_4_button"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="audio_4_button/audio_4_area"]
+shape = SubResource("CylinderShape3D_lquwl")
+
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7
+[node name="audiostreamer" parent="." instance=ExtResource("2_h2yge")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0207156, 0.999785, 0, -0.999785, -0.0207156, 0, 2.86373, 0)
+
+[node name="Timer" type="Timer" parent="."]
+
+<<<<<<< HEAD
+[node name="schublade_wandregal2" parent="." instance=ExtResource("5_aj1jl")]
+transform = Transform3D(-0.0684265, 4.20372e-16, -4.06896, 3.56031, -0.0340994, -0.078196, -0.0320649, -3.78622, 0.000704241, 0, -2.63271, 2.04644)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6041, 1.28291, 2.70982)
+light_color = Color(1, 0.8, 0.6, 1)
+light_energy = 6.0
+=======
+[node name="schublade_mitte" parent="." instance=ExtResource("7_272bh")]
+transform = Transform3D(0.0669399, 0.000293283, -4.02926, 3.19567, 0.0133397, 0.0844012, 0.011144, -3.8271, -1.45859e-05, 0, -2.60047, 1.84765)
+
+[node name="schublade_links" parent="." instance=ExtResource("7_272bh")]
+transform = Transform3D(0.0204459, -0.00202099, -3.58959, 1.01318, 0.012128, 0.0724308, 0.00326327, -3.75278, 0.00216701, 5.39082, -0.971921, 1.93888)
+
+[node name="schublade_rechts" parent="." instance=ExtResource("7_272bh")]
+transform = Transform3D(0.0204459, -0.00202099, -3.58959, 1.01318, 0.012128, 0.0724308, 0.00326327, -3.75278, 0.00216701, -5.39956, -0.971921, 1.93888)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65525, 1.28291, 1.91153)
+light_color = Color(1, 0.8, 0.6, 1)
+light_energy = 10.05
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7
+omni_range = 6.864
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_tx6je")
+}
+
+<<<<<<< HEAD
+[node name="5knöpfe_2d" parent="." instance=ExtResource("8_83goh")]
+transform = Transform3D(0.000743016, 0.0163561, -1.80314, 1.02257, -0.0892984, -8.3763e-10, -0.0644019, -1.41768, -0.0208031, -0.118301, -0.170145, 2.76592)
+
+[node name="play_button_node" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.246405)
+
+[node name="play_area" type="Area3D" parent="play_button_node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.198646, -0.292739, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="play_button_node/play_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.145583, 0, 0.66306)
+shape = SubResource("CylinderShape3D_lquwl")
+
+[node name="Label3D" type="Label3D" parent="play_button_node"]
+transform = Transform3D(1, 0, 0, 0, 0.0270144, 0.999635, 0, -0.999635, 0.0270144, -0.231651, -0.167639, 0.662366)
+text = "Play"
+
+[node name="button_1_node" type="Node3D" parent="."]
+
+[node name="audio_1_area" type="Area3D" parent="button_1_node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83454, -0.435248, -1.01285)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button_1_node/audio_1_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.199017, 0, 0.00708318)
+shape = SubResource("CylinderShape3D_lquwl")
+
+[node name="button_2_node" type="Node3D" parent="."]
+
+[node name="audio_2_area" type="Area3D" parent="button_2_node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51136, -0.55467, -1.0993)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button_2_node/audio_2_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.481365, 0, 0)
+shape = SubResource("CylinderShape3D_lquwl")
+
+[node name="button_3_node" type="Node3D" parent="."]
+
+[node name="audio_3_area" type="Area3D" parent="button_3_node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.88525, -0.468022, 0.879143)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button_3_node/audio_3_area"]
+shape = SubResource("CylinderShape3D_lquwl")
+
+[node name="button_4_node" type="Node3D" parent="."]
+
+[node name="audio_4_area" type="Area3D" parent="button_4_node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74707, -0.439043, 1.30362)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button_4_node/audio_4_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.345051)
+shape = SubResource("CylinderShape3D_lquwl")
+
+[node name="schubladen" type="Node3D" parent="."]
+
+[node name="schublade_links" parent="schubladen" instance=ExtResource("7_272bh")]
+transform = Transform3D(0.0204459, -0.00202099, -3.58959, 1.01318, 0.012128, 0.0724308, 0.00326327, -3.75278, 0.00216701, 5.39082, -0.971921, 1.93888)
+
+[node name="schublade_links2" parent="schubladen" instance=ExtResource("7_272bh")]
+transform = Transform3D(0.0204459, -0.00202099, -3.58959, 1.01318, 0.012128, 0.0724308, 0.00326327, -3.75278, 0.00216701, 5.39082, -0.971921, -1.69243)
+
+[node name="schublade_rechts" parent="schubladen" instance=ExtResource("7_272bh")]
+transform = Transform3D(0.0204459, -0.00202099, -3.58959, 1.01318, 0.012128, 0.0724308, 0.00326327, -3.75278, 0.00216701, -5.39956, -0.971921, 1.93888)
+
+[node name="schublade_rechts2" parent="schubladen" instance=ExtResource("7_272bh")]
+transform = Transform3D(0.0204459, -0.00202099, -3.58959, 1.01318, 0.012128, 0.0724308, 0.00326327, -3.75278, 0.00216701, -5.39956, -0.971921, -1.61082)
+
+[node name="schublade_rechts3" parent="schubladen" instance=ExtResource("7_272bh")]
+transform = Transform3D(0.0204083, -0.00202109, -3.91712, 1.01131, 0.0121286, 0.0790397, 0.00325726, -3.75296, 0.00236474, 0.0844398, -0.971921, -1.61082)
+
+[connection signal="input_event" from="play_button_node/play_area" to="." method="_on_play_area_input_event"]
+[connection signal="input_event" from="button_1_node/audio_1_area" to="." method="_on_audio_1_area_input_event"]
+[connection signal="input_event" from="button_2_node/audio_2_area" to="." method="_on_audio_2_area_input_event"]
+[connection signal="input_event" from="button_3_node/audio_3_area" to="." method="_on_audio_3_area_input_event"]
+[connection signal="input_event" from="button_4_node/audio_4_area" to="." method="_on_audio_4_area_input_event"]
+=======
+[connection signal="input_event" from="play_button/play_area" to="." method="_on_play_area_input_event"]
+[connection signal="input_event" from="audio_1_button/audio_1_area" to="." method="_on_audio_1_area_input_event"]
+[connection signal="input_event" from="audio_2_button/audio_2_area" to="." method="_on_audio_2_area_input_event"]
+[connection signal="input_event" from="audio_3_button/audio_3_area" to="." method="_on_audio_3_area_input_event"]
+[connection signal="input_event" from="audio_4_button/audio_4_area" to="." method="_on_audio_4_area_input_event"]
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7

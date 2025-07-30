@@ -1,0 +1,45 @@
+<<<<<<< HEAD
+[gd_scene load_steps=3 format=3 uid="uid://dgf2xc0y46v3a"]
+
+[ext_resource type="PackedScene" uid="uid://ca3nhkj1kvlpo" path="res://musikschublade/schublade.wandregal.glb" id="1_4aoh3"]
+[ext_resource type="PackedScene" uid="uid://kaj2mktrjva4" path="res://schublade_mit_notizbuch/flat_book_1_3.glb" id="2_p4yd2"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://dgf2xc0y46v3a"]
+
+[ext_resource type="PackedScene" uid="uid://ca3nhkj1kvlpo" path="res://musikschublade/schublade.wandregal.glb" id="1_4aoh3"]
+[ext_resource type="PackedScene" uid="uid://kaj2mktrjva4" path="res://schublade_mit_notizbuch/flat_book_1_3.glb" id="2_p4yd2"]
+[ext_resource type="Script" uid="uid://b3u0egw5elely" path="res://schublade_mit_notizbuch/dialog_zauberbuch.gd" id="3_xgmrh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0fyah"]
+size = Vector3(1.2, 1.2, 1.2)
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7
+
+[node name="Node3D" type="Node3D"]
+
+[node name="schublade_wandregal" parent="." instance=ExtResource("1_4aoh3")]
+transform = Transform3D(2.56757, 0, 0, 0, 1, 0, 0, 0, 1.81014, 0.177637, 0, 0.189444)
+
+[node name="flat_book_1_3" parent="." instance=ExtResource("2_p4yd2")]
+transform = Transform3D(0.638886, 0, 0, 0, 1, 0, 0, 0, 0.638665, 0.351006, 0.476968, 0.342035)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.999755, -3.4916e-10, 0.0221465, 0.0221364, -0.0301547, 0.9993, 0.00066782, 0.999545, 0.0301473, 0, 2.50177, 0.297917)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.15727, 0)
+light_color = Color(1, 0.8, 0.6, 1)
+<<<<<<< HEAD
+=======
+
+[node name="DialogCube" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.39459, 0, -1.62312)
+script = ExtResource("3_xgmrh")
+
+[node name="Area3D" type="Area3D" parent="DialogCube"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DialogCube/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.16515, 1.02731, 2.07265)
+shape = SubResource("BoxShape3D_0fyah")
+
+[connection signal="body_entered" from="DialogCube/Area3D" to="DialogCube" method="_on_area_3d_body_entered"]
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7

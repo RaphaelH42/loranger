@@ -1,0 +1,73 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://8u2tb4l4kk6b"
+path="res://.godot/imported/emile@Walking.fbx-d349d973d810e60e67f8a16dfcc96b30.scn"
+
+[deps]
+
+source_file="res://emile@Walking.fbx"
+dest_files=["res://.godot/imported/emile@Walking.fbx-d349d973d810e60e67f8a16dfcc96b30.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"Eyes": {
+"use_external/enabled": true,
+"use_external/path": "uid://b6k7cfidpvtn7"
+},
+"Face": {
+"use_external/enabled": true,
+"use_external/path": "res://2d_textures/emile_textures/Face.tres"
+},
+"Shirt": {
+"use_external/enabled": true,
+"use_external/path": "uid://dlq32jparu616"
+},
+"g1_mesh_0.3125": {
+"use_external/enabled": true,
+"use_external/path": "res://2d_textures/emile_textures/g1_mesh_0.3125.tres"
+},
+"g1_mesh_13.5": {
+"use_external/enabled": true,
+"use_external/path": "res://2d_textures/emile_textures/g1_mesh_13.5.tres"
+},
+"g1_mesh_4.25": {
+"use_external/enabled": true,
+"use_external/path": "res://2d_textures/emile_textures/g1_mesh_4.25.tres"
+},
+"g1_mesh_6.9375": {
+"use_external/enabled": true,
+"use_external/path": "res://2d_textures/emile_textures/g1_mesh_6.9375.tres"
+},
+"g1_mesh_7.5": {
+"use_external/enabled": true,
+"use_external/path": "res://2d_textures/emile_textures/g1_mesh_7.5.tres"
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1

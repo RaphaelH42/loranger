@@ -1,0 +1,117 @@
+<<<<<<< HEAD
+[gd_scene load_steps=8 format=3 uid="uid://dl6cifc07p61q"]
+
+[ext_resource type="PackedScene" uid="uid://dvja0nrsllgkn" path="res://furniture/wandschrank/wandschrank.schubladen.glb" id="1_d1faj"]
+[ext_resource type="Script" uid="uid://rqx2g7cvg00o" path="res://furniture/wandschrank/shelf_interaction.gd" id="2_aq70n"]
+[ext_resource type="PackedScene" uid="uid://87lhcqeoxvvb" path="res://2d_textures/5knöpfe.2d.glb" id="7_aq70n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nuoiu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8hvy"]
+size = Vector3(2, 1, 1.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ibrgk"]
+size = Vector3(1, 1, 1.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1l50y"]
+size = Vector3(1, 0.9, 1.5)
+
+=======
+[gd_scene load_steps=10 format=3 uid="uid://dl6cifc07p61q"]
+
+[ext_resource type="PackedScene" uid="uid://dvja0nrsllgkn" path="res://furniture/wandschrank/wandschrank.schubladen.glb" id="1_d1faj"]
+[ext_resource type="Script" uid="uid://rqx2g7cvg00o" path="res://furniture/wandschrank/shelf_interaction.gd" id="2_aq70n"]
+[ext_resource type="Script" uid="uid://ck6mmqhqu547m" path="res://furniture/wandschrank/button_1.gd" id="3_1qbq7"]
+[ext_resource type="Script" uid="uid://wkwxqadnl4wq" path="res://furniture/wandschrank/button_2.gd" id="4_prbjh"]
+[ext_resource type="Script" uid="uid://bgdyso5kyw0p7" path="res://furniture/wandschrank/button_3.gd" id="5_qakia"]
+[ext_resource type="Script" uid="uid://dv4aofdwq604d" path="res://furniture/wandschrank/button_4.gd" id="6_a0msi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nuoiu"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ie85n"]
+top_radius = 0.15
+bottom_radius = 0.15
+height = 0.1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8hvy"]
+size = Vector3(2, 1, 1.4)
+
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7
+[node name="wandschrank_schubladen" instance=ExtResource("1_d1faj")]
+
+[node name="Cube" parent="." index="0"]
+script = ExtResource("2_aq70n")
+
+[node name="Camera3D" type="Camera3D" parent="." index="1"]
+transform = Transform3D(-0.033046, 0.419963, 0.906939, -0.0121798, 0.907198, -0.420527, -0.99938, -0.0249431, -0.0248642, 2.91481, 0.398201, 0.0788927)
+
+[node name="wall" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(0.138374, 0, 0, 0, 17.611, 0, 0, 0, 27.3512, -1.46757, 1.07336, 0)
+mesh = SubResource("BoxMesh_nuoiu")
+
+<<<<<<< HEAD
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="3"]
+=======
+[node name="button_1" type="MeshInstance3D" parent="." index="3"]
+transform = Transform3D(-0.0377076, -0.999289, 0, 0.999289, -0.0377076, 0, 0, 0, 1, 0.675276, 0.772481, 1.27566)
+mesh = SubResource("CylinderMesh_ie85n")
+script = ExtResource("3_1qbq7")
+
+[node name="button_2" type="MeshInstance3D" parent="." index="4"]
+transform = Transform3D(-0.0377076, -0.999289, 0, 0.999289, -0.0377076, 0, 0, 0, 1, 0.675276, 0.783958, 0.220887)
+mesh = SubResource("CylinderMesh_ie85n")
+script = ExtResource("4_prbjh")
+
+[node name="button_3" type="MeshInstance3D" parent="." index="5"]
+transform = Transform3D(-0.0377076, -0.999289, 0, 0.999289, -0.0377076, 0, 0, 0, 1, 0.675276, 0.203389, 1.29427)
+mesh = SubResource("CylinderMesh_ie85n")
+script = ExtResource("5_qakia")
+
+[node name="button_4" type="MeshInstance3D" parent="." index="6"]
+transform = Transform3D(-0.0377076, -0.999289, 0, 0.999289, -0.0377076, 0, 0, 0, 1, 0.675276, 0.203389, 0.204119)
+mesh = SubResource("CylinderMesh_ie85n")
+script = ExtResource("6_a0msi")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="7"]
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91013, -0.593394, 3.25897)
+light_color = Color(1, 0.8, 0.6, 1)
+light_energy = 9.565
+omni_range = 37.555
+
+<<<<<<< HEAD
+[node name="Area3D_musikschublade" type="Area3D" parent="." index="4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_musikschublade" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.525579, 0.739505)
+shape = SubResource("BoxShape3D_h8hvy")
+
+[node name="5knöpfe_2d" parent="." index="5" instance=ExtResource("7_aq70n")]
+transform = Transform3D(1, 0, 0, 0, 0.384434, 0, 0, 0, 0.528414, 0.72005, -0.204232, 0.75421)
+
+[node name="Area3D_paper" type="Area3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.264521, -1.12995)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_paper" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244691, 0.19712, 0.329945)
+shape = SubResource("BoxShape3D_ibrgk")
+
+[node name="Area3D_clock" type="Area3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.28084, 1.14096)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_clock" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.504039, 0.224275, -0.420713)
+shape = SubResource("BoxShape3D_1l50y")
+
+[connection signal="input_event" from="Area3D_musikschublade" to="Cube" method="_on_area_3d_input_event"]
+[connection signal="input_event" from="Area3D_paper" to="Cube" method="_on_area_3d_paper_input_event"]
+[connection signal="input_event" from="Area3D_clock" to="Cube" method="_on_area_3d_clock_input_event"]
+=======
+[node name="Area3D" type="Area3D" parent="." index="8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.525579, 0.739505)
+shape = SubResource("BoxShape3D_h8hvy")
+
+[connection signal="input_event" from="Area3D" to="Cube" method="_on_area_3d_input_event"]
+>>>>>>> 59510b83e89232a772f99a6db29f48be8a26aba7

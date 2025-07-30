@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://krfr25dirj3x"
-path="res://.godot/imported/bücherschrank (1)_books_blend.glb-0f3eaf8baa856de0a27569945d67c8d7.scn"
+uid="uid://87lhcqeoxvvb"
+path="res://.godot/imported/5knöpfe.2d.glb-eb9fb4d75140565d748fc9902f70fc47.scn"
 
 [deps]
 
-source_file="res://furniture/bücherschrank (1)_books_blend.glb"
-dest_files=["res://.godot/imported/bücherschrank (1)_books_blend.glb-0f3eaf8baa856de0a27569945d67c8d7.scn"]
+source_file="res://2d_textures/5knöpfe.2d.glb"
+dest_files=["res://.godot/imported/5knöpfe.2d.glb-eb9fb4d75140565d748fc9902f70fc47.scn"]
 
 [params]
 

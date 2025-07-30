@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://wcfb1xyc610x"
-path="res://.godot/imported/bücherschrank_neu.glb-fa34d0d89327879a02ec4f83439d99ad.scn"
+path="res://.godot/imported/bücherschrank_neu.glb-40f5418064037ee1cb3b002c8a788616.scn"
 
 [deps]
 
-source_file="res://furniture/buecherschrank_groß/bücherschrank_neu.glb"
-dest_files=["res://.godot/imported/bücherschrank_neu.glb-fa34d0d89327879a02ec4f83439d99ad.scn"]
+source_file="res://furniture/buecherschrank_groß/bücherschrank_neu.glb"
+dest_files=["res://.godot/imported/bücherschrank_neu.glb-40f5418064037ee1cb3b002c8a788616.scn"]
 
 [params]
 

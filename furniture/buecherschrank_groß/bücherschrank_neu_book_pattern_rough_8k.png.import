@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ce8cjlrgli1f1"
-path.s3tc="res://.godot/imported/bücherschrank_neu_book_pattern_rough_8k.png-1b871c7fe6c5b1989d483120625bb474.s3tc.ctex"
+path.s3tc="res://.godot/imported/bücherschrank_neu_book_pattern_rough_8k.png-ceaa6a57fba9b5d09aab68a7bc030da4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://furniture/buecherschrank_groß/bücherschrank_neu_book_pattern_rough_8k.png"
-dest_files=["res://.godot/imported/bücherschrank_neu_book_pattern_rough_8k.png-1b871c7fe6c5b1989d483120625bb474.s3tc.ctex"]
+source_file="res://furniture/buecherschrank_groß/bücherschrank_neu_book_pattern_rough_8k.png"
+dest_files=["res://.godot/imported/bücherschrank_neu_book_pattern_rough_8k.png-ceaa6a57fba9b5d09aab68a7bc030da4.s3tc.ctex"]
 
 [params]
 

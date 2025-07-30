@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://gk8loikv73ri"
-path="res://.godot/imported/grüneLampe.2d.glb-322f3560a949c03b5381b485980b6cbb.scn"
+path="res://.godot/imported/grüneLampe.2d.glb-9fb6b1070cc2de348b270ff12cd9f3fb.scn"
 
 [deps]
 
-source_file="res://2d_textures/grüneLampe.2d.glb"
-dest_files=["res://.godot/imported/grüneLampe.2d.glb-322f3560a949c03b5381b485980b6cbb.scn"]
+source_file="res://2d_textures/grüneLampe.2d.glb"
+dest_files=["res://.godot/imported/grüneLampe.2d.glb-9fb6b1070cc2de348b270ff12cd9f3fb.scn"]
 
 [params]
 
